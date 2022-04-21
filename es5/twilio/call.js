@@ -738,14 +738,14 @@ var Call = /** @class */ (function (_super) {
             _this._pstream.addListener('hangup', _this._onHangup);
             if (_this._direction === Call.CallDirection.Incoming) {
                 _this._isAnswered = true;
-                _this._pstream.on('answer', _this._onAnswer.bind(_this));
+                _this._pstream.on('answer', _this._onAnswer);
                 _this._mediaHandler.answerIncomingCall(_this.parameters.CallSid, _this._options.offerSdp, rtcConstraints, rtcConfiguration, onAnswer);
             }
             else {
                 var params = Array.from(_this.customParameters.entries()).map(function (pair) {
                     return encodeURIComponent(pair[0]) + "=" + encodeURIComponent(pair[1]);
                 }).join('&');
-                _this._pstream.on('answer', _this._onAnswer.bind(_this));
+                _this._pstream.on('answer', _this._onAnswer);
                 _this._mediaHandler.makeOutgoingCall(_this._pstream.token, params, _this.outboundConnectionId, rtcConstraints, rtcConfiguration, onAnswer);
             }
         };
