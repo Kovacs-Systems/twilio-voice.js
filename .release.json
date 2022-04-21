@@ -1,15 +1,14 @@
 {
   "type": "JavaScript",
-  "ci": "circleci",
-  "slug": "twilio/twilio-voice.js",
+  "slug": "Kovacs-Systems/twilio-voice.js",
   "env": {
-    "GH_REF": "github.com/twilio/twilio-voice.js.git"
+    "GH_REF": "github.com/Kovacs-Systems/twilio-voice.js.git"
   },
   "plans": {
     "release": {
       "env": {
-        "GIT_USER_NAME": "twilio-vblocks-ci",
-        "GIT_USER_EMAIL": "svc.vblocks-ci@twilio.com"
+        "GIT_USER_NAME": "amrictor",
+        "GIT_USER_EMAIL": "amrictor@gmail.com"
       },
       "commands": [
         "node ./node_modules/.bin/release --bump ${CURRENT_VERSION} ${RELEASE_VERSION}",
