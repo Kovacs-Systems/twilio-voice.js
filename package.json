@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:twilio/twilio-voice.js.git"
+    "url": "git@github.com:Kovacs-Systems/twilio-voice.js.git"
   },
   "scripts": {
     "build": "npm-run-all clean build:constants build:errors docs:ts build:es5 build:ts build:dist build:dist-min",
